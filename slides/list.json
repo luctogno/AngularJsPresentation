@@ -1,0 +1,30 @@
+[
+    "index.md",
+    [
+        "definizione.html",
+        "aneddoto.html"
+    ],
+    "caratteristiche.html",
+    [
+        "mvc.html",
+        "typic-mvc.html",
+        "angular-mvc.html"
+    ],
+    "client-logic.html",
+    "javascript.html",
+    [
+        "jquery.html",
+        "angular-jquery-text.html",
+        "angular-jquery-image.html",
+        "contiene-jquery.html"
+    ],
+    [
+        "data-binding.html",
+        "data-bind-one.html",
+        "data-bind-two.html",
+        "data-bind-example.html"
+    ],
+    [
+        "dependency-injection.html"
+    ]
+]

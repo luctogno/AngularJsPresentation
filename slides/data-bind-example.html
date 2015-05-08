@@ -1,0 +1,8 @@
+<p>Esempio</p>
+<form>
+  <div class="form-group">
+    <label for="name">Come ti chiami?</label>
+    <input name="name" type="text" ng-model="modello"/>
+</div>
+</form>
+<p ng-if="modello != ''"> Il tuo nome è {{modello}} </p>
