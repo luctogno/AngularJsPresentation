@@ -25,6 +25,33 @@
         "data-bind-example.html"
     ],
     [
-        "dependency-injection.html"
+        "dependency-injection.html",
+        "dependency-injection-spiegazione1.html",
+        "dependency-injection-spiegazione2.html",
+        "dependency-injection-angularjs.html"
+    ],
+    "basi.html",
+    [
+        "scope.html",
+		"scope-glue-image.html",
+		"scope-hierance-text.html",
+		"scope-hierance-image.html"
+    ],
+    [
+        "moduli.html"
+    ],
+    [
+        "directive.html"
+    ],
+    [
+        "controllers.html"
+    ],
+    [
+        "services.html"
+    ],
+    [
+        "custom-directive.html",
+        "custom-directive-methods.html",
+        "custom-directive-example.html"
     ]
 ]

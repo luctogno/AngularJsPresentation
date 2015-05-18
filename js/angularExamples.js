@@ -1,5 +1,9 @@
-    var module = angular.module('PresentationModule', []);
+/*jshint strict:false */
+/* global angular */
+
+	var module = angular.module('PresentationModule', []);
     
-    module.controller('Controller', ["$scope", function($scope){
-        $scope.modello = "";
+    module.controller('Controller', ['$scope', function($scope){
+		'use strict';
+        $scope.modello = '';
     }]);
