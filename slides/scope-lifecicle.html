@@ -1,0 +1,9 @@
+<h3>Scope life cicles</h3>
+
+<ol>
+<li>The browser's event-loop waits for an event to arrive. An event is a user interaction, timer event, or network event (response from a server).</li>
+
+<li>The event's callback gets executed. This enters the JavaScript context. The callback can modify the DOM structure.</li>
+
+<li>Once the callback executes, the browser leaves the JavaScript context and re-renders the view based on DOM changes.</li>
+</ol>

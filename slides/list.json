@@ -33,9 +33,12 @@
     "basi.html",
     [
         "scope.html",
-		"scope-glue-image.html",
-		"scope-hierance-text.html",
-		"scope-hierance-image.html"
+        "scope-glue-image.html",
+        "scope-hierance-text.html",
+        "scope-hierance-image.html",
+        "scope-example.html",
+        "scope-lifecicle-image.html",
+        "scope-lifecicle.html"
     ],
     [
         "moduli.html"
@@ -53,5 +56,5 @@
         "custom-directive.html",
         "custom-directive-methods.html",
         "custom-directive-example.html"
-    ]
+    ] 
 ]
