@@ -1,9 +1,9 @@
 <h3>Scope life cicles</h3>
 
 <ol>
-<li>The browser's event-loop waits for an event to arrive. An event is a user interaction, timer event, or network event (response from a server).</li>
+<li>Il browser &egrave; sempre in attesa che arrivi un evento. Un evento &egrave; o un'interazione dell'utente, un evento a tempo programmato o un evento causato dalla rete (es. risposta da un server).</li>
 
-<li>The event's callback gets executed. This enters the JavaScript context. The callback can modify the DOM structure.</li>
+<li>All'arrivo dell'evento viene eseguita la callback dell'evento stesso. Ora si entra nel context di JavaScript. La callback oltre ad avere accesso alle risorse del JS(angular) pu&ograve; anche modificare il DOM.</li>
 
-<li>Once the callback executes, the browser leaves the JavaScript context and re-renders the view based on DOM changes.</li>
+<li>Finita l'esecuzione della callback il browser lascia il contesto JS e fa il re-render delle parti del DOM modificate.</li>
 </ol>

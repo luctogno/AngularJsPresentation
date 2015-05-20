@@ -7,7 +7,6 @@
     "caratteristiche.html",
     [
         "mvc.html",
-        "typic-mvc.html",
         "angular-mvc.html"
     ],
     "client-logic.html",
@@ -15,27 +14,23 @@
     [
         "jquery.html",
         "angular-jquery-text.html",
-        "angular-jquery-image.html",
-        "contiene-jquery.html"
+        "angular-jquery-image.html"
     ],
     [
         "data-binding.html",
-        "data-bind-one.html",
-        "data-bind-two.html",
+        "data-bind-images.html",
         "data-bind-example.html"
     ],
     [
         "dependency-injection.html",
         "dependency-injection-spiegazione1.html",
-        "dependency-injection-spiegazione2.html",
-        "dependency-injection-angularjs.html"
+        "dependency-injection-spiegazione2.html"
     ],
     "basi.html",
     [
         "scope.html",
         "scope-glue-image.html",
         "scope-hierance-text.html",
-        "scope-hierance-image.html",
         "scope-example.html",
         "scope-lifecicle-image.html",
         "scope-lifecicle.html"
@@ -56,5 +51,5 @@
         "custom-directive.html",
         "custom-directive-methods.html",
         "custom-directive-example.html"
-    ] 
+    ]
 ]

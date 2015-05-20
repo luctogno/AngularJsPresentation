@@ -6,4 +6,6 @@
     module.controller('Controller', ['$scope', function($scope){
 		'use strict';
         $scope.modello = '';
+        
+        $scope.
     }]);
