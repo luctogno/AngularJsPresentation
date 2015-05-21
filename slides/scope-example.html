@@ -1,20 +1,13 @@
-<h2>Example</h2>
+<h2>Esempio</h2>
 
-<section>
-    <pre><code data-trim>
-        var mainApp = angular.module("mainApp", []);
-			mainApp.controller("shapeController", function($scope) {
-				$scope.message = "In shape controller";
-				$scope.type = "Shape";
-			});
-		
-        mainApp.controller("circleController", function($scope) {
-				$scope.message = "In circle controller";
-			});
-		
-        mainApp.controller("squareController", function($scope) {
-				$scope.message = "In square controller";
-				$scope.type = "Square";
-			});
-    </code></pre>
-</section>
+<p class="highlight-current-blue"><u>shapeController</u> &egrave; il padre di <u>circleController</u> e <u>squareController</u></p>
+
+<div ng-controller="shapeController">
+    <u>shapeController</u> => message : <i>{{message}}</i> - type : <i>{{type}}</i>
+    <div ng-controller="circleController">
+       <u>circleController</u> => message : <i>{{message}}</i> - type : <i>{{type}}</i>
+    </div>
+    <div ng-controller="squareController">
+       <u>squareController</u> => message : <i>{{message}}</i> - type : <i>{{type}}</i>
+    </div>
+</div>

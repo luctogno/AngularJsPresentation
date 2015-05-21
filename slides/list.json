@@ -29,11 +29,11 @@
     "basi.html",
     [
         "scope.html",
-        "scope-glue-image.html",
         "scope-hierance-text.html",
         "scope-example.html",
-        "scope-lifecicle-image.html",
-        "scope-lifecicle.html"
+        "scope-lifecicle.html",
+        "scope-lifecicle2.html",
+        "scope-lifecicle-image.html"
     ],
     [
         "moduli.html"
@@ -42,7 +42,9 @@
         "directive.html"
     ],
     [
-        "controllers.html"
+        "controllers.html",
+		"controllers-use-or-not.html",
+		"controllers-use-or-not2.html"
     ],
     [
         "services.html"

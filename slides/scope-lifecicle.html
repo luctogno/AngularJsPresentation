@@ -1,9 +1,10 @@
 <h3>Scope life cicles</h3>
 
 <ol>
-<li>Il browser &egrave; sempre in attesa che arrivi un evento. Un evento &egrave; o un'interazione dell'utente, un evento a tempo programmato o un evento causato dalla rete (es. risposta da un server).</li>
-
-<li>All'arrivo dell'evento viene eseguita la callback dell'evento stesso. Ora si entra nel context di JavaScript. La callback oltre ad avere accesso alle risorse del JS(angular) pu&ograve; anche modificare il DOM.</li>
-
-<li>Finita l'esecuzione della callback il browser lascia il contesto JS e fa il re-render delle parti del DOM modificate.</li>
+<li class="fragment"><p><strong>Creazione</strong></p>
+<p>Il rootScope viene creato all'inizio (bootstrap) dell'applicazione. Altre direttive creano il proprio scope al momento della propria creazione</p>
+</li>
+<li class="fragment"><p><strong>Registrazione Watcher</strong></p>
+<p>Viene registrato il watcher della direttiva alla lista dei watchers(<code>$$watchers</code>) del modulo</p>
+</li>
 </ol>
