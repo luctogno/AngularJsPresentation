@@ -1,6 +1,6 @@
-  .reveal .state-background{
+div.reveal{
       background-image: url("/img/logo.png");
       background-repeat: no-repeat;
       background-position: 2% 98%;
       background-size: 15%;
-  }
+}

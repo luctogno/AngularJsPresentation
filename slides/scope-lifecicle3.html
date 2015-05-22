@@ -1,0 +1,5 @@
+<ol start=5>
+<li><p><strong>Distruzione dello scope</strong></p>
+<p>Su uno child scopes non serve più, &egrave; il suo creatore il resposabile della sua distruzione tramite lo <a href="api/ng/type/$rootScope.Scope#$destroy">scope.$destroy()</a>. Questo blocca la propagazione della <code><span class="pln">$digest</span></code> ai figli e permette al garbage collector di liberare la memoria occupata da questo scope.</p>
+</li>
+</ol>

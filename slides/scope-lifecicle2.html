@@ -5,7 +5,4 @@
 <li  class="fragment"><p><strong>Osservazione dei cambiamenti</strong></p>
 <p>Alla fine dell' <code>$apply</code>, Angular esegue il ciclo della <a href="api/ng/type/$rootScope.Scope#$digest">$digest</a> sulla root scope, che si propaga a tutti i figli. Durante la <code><span class="pln">$digest</span></code> tutte le <code><span class="pln">$watch</span></code> o le expression o le funzioni monitorate vengono controllate, cio&egrave; si va a controllare che il valore non è cambiato rispetto a prima, se invece è cambiato veiene chiamata la callback della <code><span class="pln">$watch</span></code>.
 </li>
-<li class="fragment"><p><strong>Distruzione dello scope</strong></p>
-<p>Su uno child scopes non serve più, &egrave; il suo creatore il resposabile della sua distruzione tramite lo <a href="api/ng/type/$rootScope.Scope#$destroy">scope.$destroy()</a>. Questo blocca la propagazione della <code><span class="pln">$digest</span></code> ai figli e permette al garbage collector di liberare la memoria occupata da questo scope.</p>
-</li>
 </ol>

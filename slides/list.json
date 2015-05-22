@@ -24,15 +24,17 @@
     [
         "dependency-injection.html",
         "dependency-injection-spiegazione1.html",
-        "dependency-injection-spiegazione2.html"
+        "dependency-injection-spiegazione2.html",
+		"dependency-injection-spiegazione3.html"
     ],
     "basi.html",
     [
         "scope.html",
         "scope-hierance-text.html",
         "scope-example.html",
-        "scope-lifecicle.html",
+        "scope-lifecicle1.html",
         "scope-lifecicle2.html",
+		"scope-lifecicle3.html",
         "scope-lifecicle-image.html"
     ],
     [
