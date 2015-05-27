@@ -32,13 +32,16 @@
         "scope.html",
         "scope-hierance-text.html",
         "scope-example.html",
+        "scope-example-code.html",
         "scope-lifecicle1.html",
         "scope-lifecicle2.html",
 		"scope-lifecicle3.html",
         "scope-lifecicle-image.html"
     ],
     [
-        "moduli.html"
+        "moduli1.html",
+        "moduli2.html",
+        "moduli3.html"
     ],
     [
         "directive.html"
@@ -49,7 +52,8 @@
 		"controllers-use-or-not2.html"
     ],
     [
-        "services.html"
+        "services1.html",
+		"services2.html"
     ],
     [
         "custom-directive.html",

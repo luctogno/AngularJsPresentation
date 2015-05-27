@@ -1,0 +1,19 @@
+<pre>
+Insieme al modulo &egrave; possibile definire blocchi di configurazione e blocchi da eseguire una volta finito il bootstrap (il caricamento del modulo angular)
+    <code class="javascript">
+    angular.module('myModule', []).
+    config(function(injectables) { // provider-injector
+      // This is an example of config block.
+      // You can have as many of these as you want.
+      // You can only inject Providers (not instances)
+      // into config blocks.
+    }).
+    run(function(injectables) { // instance-injector
+      // This is an example of a run block.
+      // You can have as many of these as you want.
+      // You can only inject instances (not Providers)
+      // into run blocks
+    });
+    </code>
+</pre>
+</section>

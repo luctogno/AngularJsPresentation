@@ -3,11 +3,11 @@
 <p class="highlight-current-blue"><u>shapeController</u> &egrave; il padre di <u>circleController</u> e <u>squareController</u></p>
 
 <div ng-controller="shapeController">
-    <u>shapeController</u> => message : <i>{{message}}</i> - type : <i>{{type}}</i>
+    {{message}} => <i>{{type}}</i>
     <div ng-controller="circleController">
-       <u>circleController</u> => message : <i>{{message}}</i> - type : <i>{{type}}</i>
+       {{message}} => <i>{{type}}</i>
     </div>
     <div ng-controller="squareController">
-       <u>squareController</u> => message : <i>{{message}}</i> - type : <i>{{type}}</i>
+       {{message}} => <i>{{type}}</i>
     </div>
 </div>
