@@ -58,6 +58,7 @@
     [
         "custom-directive.html",
         "custom-directive-methods.html",
-        "custom-directive-example.html"
+        "custom-directive-example1.html",
+		"custom-directive-example2.html"
     ]
 ]
