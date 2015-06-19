@@ -1,10 +1,10 @@
 <pre>
 Aggiungiamo questa direttiva personalizzata
-<code class="javascript tag" style="font-size:0.7em;">
+<code class="javascript tag" style="font-size:0.7em;line-height: normal;">
 var myModule.directive('digitalClock', [
-    '$timeout',
+    '$interval',
     '$filter',
-    function ($timeout, $filter) {
+    function ($interval, $filter) {
 
         return {
             restrict: 'EA',
@@ -13,23 +13,15 @@ var myModule.directive('digitalClock', [
             scope: true,
             link: function (scope, element, attrs) {
 
-                var getFormattedDate = function () {
-                    return $filter('date')(new Date(), scope.format);
-                };
-
-                var delayedUpdate = function () {
-                    $timeout(function () {
-                        scope.time = getFormattedDate();
-                        delayedUpdate(scope);
-                    }, 1000);
-                };
-
                 scope.format = attrs.format || 'HH:mm:ss';
-                scope.time = getFormattedDate();
-
-                delayedUpdate();
+                
+                $interval(function(){
+                      scope.time = $filter('date')(new Date(), scope.format);
+                }, 1000);
+                // ogni secondo esegue la funzione
             }
         };
+        
     }]);
     </code>
 </pre>
