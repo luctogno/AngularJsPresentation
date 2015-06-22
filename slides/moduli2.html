@@ -1,18 +1,16 @@
-<section>
+
 <pre>
 Il modulo va "attaccato" all'Html tramite la direttiva angular ng-app.
 <code class="html">
-<div ng-app="myApp">
-  <div ng-controller="myController">
-      {{variable}}
-  </div>
+ &lt;div ng-app="myApp"&gt;
+  &lt;div ng-controller="myController"&gt;
+      &#123; &#123; variable &#125; &#125;
+  &lt;/div&gt;
 </div>
 </code>
 </pre>
-</section>
 
-<section class="fragment">
-<pre>
+<pre class="fragment">
 Le componenti di angular vanno definiti dal modulo. &Egrave; possibile definire una variabile per referenziare il modulo.
     <code class="js">
     var myAppModule = angular.module('myApp', [
@@ -24,4 +22,3 @@ Le componenti di angular vanno definiti dal modulo. &Egrave; possibile definire 
     });
     </code>
 </pre>
-</section>

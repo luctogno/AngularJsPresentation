@@ -1,0 +1,14 @@
+<pre>
+Le direttive applicate all'HTML, ometto per leggebilità gli abbellimenti grafici e le classi CSS
+    <code class="html">
+&lt;div ng-controller="theController"&gt;
+    &lt;div ng-repeat="elem in colors"&gt;
+        &lt;button ng-class="elem.color" ng-click="changeColor(elem)"&gt;{{elem.name}}&lt;/button&gt;
+        &lt;span ng-if="elem.showOther"&gt;+&lt;/span&gt;
+        &lt;span ng-if="!elem.showOther"&gt;-&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;button ng-class="bgColor"&gt;Il risultato&lt;/button&gt;
+    &lt;button ng-show="showOther" ng-class="bgColor"&gt;L'altro&lt;/button&gt;
+&lt;/div&gt;
+    </code>
+</pre>

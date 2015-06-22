@@ -1,0 +1,19 @@
+<p>
+	Un altro modo per usare i filtri &egrave;: per il filtro currency uso <i>currencyFilter</i> come dipendenza. 
+</p>
+
+<p class="fragment">
+	Oppure si referenzia il servizio dei filtri $filter e si carica il filtro desiderato $filter('currency')
+</p>
+
+<pre class="fragment">
+	Esempi
+    <code class="javascript" data-trim>    
+...
+currencyFilter(25,'€');
+...
+$filter('currency')(25,'€');
+...
+    </code>
+</pre>
+

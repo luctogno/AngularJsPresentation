@@ -1,0 +1,22 @@
+<h3>Esempio</h3>
+
+<pre>
+La nostra business logic di esempio
+    <code class="javascript">    
+module.controller('theController', function ($scope) {
+    $scope.colors = [
+        { color: 'blue', name: 'BLU', showOther : true},
+        { color: 'red', name: 'ROSSO', showOther : true },
+        { color: 'yellow', name: 'GIALLO', showOther : false },
+        { color: 'orange', name: 'ARANCIO', showOther : false },
+        { color: 'purple', name: 'VIOLA', showOther : false },
+        { color: 'green', name: 'VERDE', showOther : true }
+    ];
+
+    $scope.changeColor = function (elem) {
+        $scope.bgColor = elem.color;
+        $scope.showOther = elem.showOther;
+    };
+});
+    </code>
+</pre>

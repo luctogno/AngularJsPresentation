@@ -25,7 +25,7 @@
         "dependency-injection.html",
         "dependency-injection-spiegazione1.html",
         "dependency-injection-spiegazione2.html",
-		"dependency-injection-spiegazione3.html"
+        "dependency-injection-spiegazione3.html"
     ],
     "basi.html",
     [
@@ -35,7 +35,7 @@
         "scope-example-code.html",
         "scope-lifecicle1.html",
         "scope-lifecicle2.html",
-		"scope-lifecicle3.html",
+        "scope-lifecicle3.html",
         "scope-lifecicle-image.html"
     ],
     [
@@ -44,21 +44,42 @@
         "moduli3.html"
     ],
     [
-        "directive.html"
+        "directive.1.html",
+        "directive.2.html",
+        "directive.3.html",
+        "directive.code.1.html",
+        "directive.code.2.html",
+        "directive.live.example.html"
     ],
     [
         "controllers.html",
-		"controllers-use-or-not.html",
-		"controllers-use-or-not2.html"
+        "controllers-use-or-not.html",
+        "controllers-use-or-not2.html"
     ],
     [
         "services1.html",
-		"services2.html"
+        "services2.html"
+    ],
+    [
+        "expression.1.html",
+        "expression.2.html"
+    ],
+    [
+        "filter.1.html",
+        "filter.2.html",
+        "filter.3.html"
     ],
     [
         "custom-directive.html",
-        "custom-directive-methods.html",
+        "custom-directive-methods.1.html",
+        "custom-directive-methods.2.html",
         "custom-directive-example1.html",
-		"custom-directive-example2.html"
-    ]
+        "custom-directive-example2.html"
+    ],
+    [
+        "and-more.1.html",
+        "and-more.2.html",
+        "and-more.3.html"
+    ],
+    "credits.html"
 ]

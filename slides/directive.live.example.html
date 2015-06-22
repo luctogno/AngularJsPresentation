@@ -1,0 +1,13 @@
+<div ng-controller="theController" class="row">
+    <div class="col-md-6">
+        <div ng-repeat="elem in colors" class="row">
+            <button class="btn" ng-class="elem.color" ng-click="changeColor(elem)">{{elem.name}}</button>
+             <span ng-if="elem.showOther">+</span>
+             <span ng-if="!elem.showOther">-</span>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <button class="btn result" ng-class="bgColor">Il risultato</button>
+        <button class="btn result" ng-show="showOther" ng-class="bgColor">L'altro</button>
+    </div>
+</div>

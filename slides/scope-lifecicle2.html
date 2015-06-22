@@ -3,6 +3,6 @@
 <p>Per osservare il cambiamento del model dopo il lancio di una qualsiasi azione dei controller uso lo <a href="api/ng/type/$rootScope.Scope#$apply">scope.$apply()</a>.
 </li>
 <li  class="fragment"><p><strong>Osservazione dei cambiamenti</strong></p>
-<p>Alla fine dell' <code>$apply</code>, Angular esegue il ciclo della <a href="api/ng/type/$rootScope.Scope#$digest">$digest</a> sulla root scope, che si propaga a tutti i figli. Durante la <code><span class="pln">$digest</span></code> tutte le <code><span class="pln">$watch</span></code> o le expression o le funzioni monitorate vengono controllate, cio&egrave; si va a controllare che il valore non è cambiato rispetto a prima, se invece è cambiato veiene chiamata la callback della <code><span class="pln">$watch</span></code>.
+<p>Alla fine dell' <code>$apply</code>, Angular esegue il ciclo della <a href="api/ng/type/$rootScope.Scope#$digest">$digest</a> sulla root scope, che si propaga a tutti i figli. Durante la <code><span class="pln">$digest</span></code> tutte le <code><span class="pln">$watch</span></code> o le expression o le funzioni monitorate vengono controllate, cio&egrave; si va a controllare che il valore non è cambiato rispetto a prima, se invece è cambiato viene chiamata la callback della <code><span class="pln">$watch</span></code>.
 </li>
 </ol>

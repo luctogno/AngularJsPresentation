@@ -4,3 +4,43 @@ div.reveal{
       background-position: 2% 98%;
       background-size: 15%;
 }
+
+button.blue{
+       background-color: #2196F3!important;
+       border: 1px solid #000000;
+}
+
+button.red{
+       background-color: #F44336!important;
+       color: white;
+       border: 1px solid #000000; 
+}
+
+button.yellow{
+       background-color: #FFEB3B!important;
+       border: 1px solid #000000;
+}
+
+button.orange{
+       background-color: #FF9800!important;
+       border: 1px solid #000000;
+       color: white;
+}
+
+button.purple{
+       background-color: #9C27B0!important;
+       border: 1px solid #000000;
+       color: white;
+}
+
+button.green{
+       background-color: #4CAF50!important;
+       border: 1px solid #000000;
+       color: white;
+}
+
+button.result {
+     width: 300px;
+     height: 150px;    
+     margin: 10px;
+}

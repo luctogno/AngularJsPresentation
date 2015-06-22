@@ -1,3 +1,5 @@
+/* jshint ignore:start */
+
 $parse = function (expression) {
   var result = function(scope) {
     return scope[expression];
@@ -114,3 +116,5 @@ scope.$apply(function() {
 scope.$apply(function() {
   scope.title = 'M6Web !!';
 });
+
+/* jshint ignore:end */
