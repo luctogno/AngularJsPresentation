@@ -1,120 +1,128 @@
-/* jshint ignore:start */
+/* use stric */
 
-$parse = function (expression) {
-  var result = function(scope) {
+//Implementazione spicciola delle parti di AngularJS: Scope e Controller
+
+var $parse = function (expression) {
+  var result = function (scope) {
     return scope[expression];
-  }
+  };
 
   result.assign = function (scope, newValue) {
     scope[expression] = newValue;
-  }
+  };
 
   return result;
-}
-
+};
 
 function Scope() {
   this.$$watchers = [];
 }
 
-Scope.prototype.$watch = function(watcher, listenerFn) {
-  if(typeof watcher == 'string') {
-    var watcherFn = $parse(watcher);
+Scope.prototype.$watch = function (watcher, listenerFn) {
+  var watcherFn;
+
+  if (typeof watcher == 'string') {
+    watcherFn = $parse(watcher);
   } else {
-    var watcherFn = watcher;
+    watcherFn = watcher;
   }
 
   this.$$watchers.push({
     watcherFn: watcherFn,
     listenerFn: listenerFn
   });
-}
+};
 
-Scope.prototype.$digest = function() {
-  this.$$watchers.forEach(function(watch) {
+Scope.prototype.$digest = function () {
+  this.$$watchers.forEach(function (watch) {
     var newValue = watch.watcherFn(this);
     var oldValue = watch.last;
-    if(newValue != oldValue) {
+    if (newValue != oldValue) {
       watch.listenerFn(newValue, oldValue, this);
       watch.last = newValue;
     }
   }.bind(this));
-}
+};
 
-Scope.prototype.$apply = function(exprFn) {
+Scope.prototype.$apply = function (exprFn) {
   try {
     exprFn();
   } finally {
     this.$digest();
   }
-}
+};
 
+var $$directives = {};
 
-$$directives = {};
-
-$directive = function(name, directiveFn) {
-  if(directiveFn) {
+var $directive = function (name, directiveFn) {
+  if (directiveFn) {
     $$directives[name] = directiveFn;
   }
   return $$directives[name];
-}
+};
 
-$compile = function(element, scope) {
+var $compile = function (element, scope) {
   element.children.forEach = Array.prototype.forEach;
   element.attributes.forEach = Array.prototype.forEach;
 
-  element.children.forEach(function(child) {
+  element.children.forEach(function (child) {
     $compile(child, scope);
   });
 
-  element.attributes.forEach(function(attribute) {
+  element.attributes.forEach(function (attribute) {
     var directiveFn = $directive(attribute.name);
-    if(directiveFn) {
+    if (directiveFn) {
       directiveFn(scope, element, element.attributes);
     }
   });
-}
+};
 
-
-$directive('ng-bind', function(scope, element, attributes) {
-  scope.$watch(attributes['ng-bind'].value, function(newValue) {
+$directive('ng-bind', function (scope, element, attributes) {
+  scope.$watch(attributes['ng-bind'].value, function (newValue) {
     element.innerHTML = newValue;
   });
 });
 
-$directive('ng-model', function(scope, element, attributes) {
-  scope.$watch(attributes['ng-model'].value, function(newValue) {
+$directive('ng-model', function (scope, element, attributes) {
+  // TWO-WAY data binding
+  scope.$watch(attributes['ng-model'].value, function (newValue) {
     element.value = newValue;
   });
-
-  element.addEventListener('keyup', function() {
-    scope.$apply(function() {
+  
+  // aggiornamento del componente (secondo data-binding)
+  element.addEventListener('keyup', function () {
+    scope.$apply(function () {
       $parse(attributes['ng-model'].value).assign(scope, element.value);
     });
   });
 });
 
 
+// fine definizione
+
+//Inizializzazione di Angular (BOOTSTRAP)
+
+//console.log($$directives);
+
+var rootScope = new Scope();
+
+$compile(document.body, rootScope);
 
 
-console.log($$directives);
+//parte specifica della pagine, 
+//messa qui per evitare l'inizializzazione del modulo e il controller
 
-
-
-var scope = new Scope();
-
-$compile(document.body, scope);
-
-scope.$watch('title', function(newValue, oldValue) {
+rootScope.$watch('title', function (newValue, oldValue) {
   console.log('listened title', oldValue, '->', newValue);
 });
 
-scope.$apply(function() {
-  scope.title = 'M6Web';
+rootScope.$apply(function () {
+  rootScope.title = 'AngularJS is Hard';
+  rootScope.name = 'World';
 });
 
-scope.$apply(function() {
-  scope.title = 'M6Web !!';
-});
-
-/* jshint ignore:end */
+setTimeout(function () {
+  rootScope.$apply(function () {
+    rootScope.title = 'AngularJS is easy !!';
+  });
+}, 5000);
