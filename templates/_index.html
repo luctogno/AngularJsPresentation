@@ -15,7 +15,7 @@
 
         <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
     
-        <link rel="stylesheet" href="bower_components/reveal.js/css/theme/beige.css" id="theme">
+        <link rel="stylesheet" href="bower_components/reveal.js/css/theme/serif.css" id="theme">
     
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
         
@@ -23,7 +23,6 @@
 
         <!-- For syntax highlighting -->
         <link rel="stylesheet" href="bower_components/highlightjs/styles/default.css">
-        <link rel="stylesheet" href="bower_components/highlightjs/styles/solarized_dark.css" id="highlight-theme">
 
         <!-- If the query includes 'print-pdf', use the PDF print sheet -->
         <script>
@@ -41,11 +40,11 @@
         <![endif]-->
     </head>
 
-    <body>
+    <body ng-app="PresentationModule">
 
-        <div class="reveal" ng-app="PresentationModule">
+        <div class="reveal" >
 
-            <div class="slides" ng-controller="Controller">
+            <div class="slides" ng-controller="IlController">
 
                 <% _.forEach(slides, function(slide) { %>
                     <% if (!_.isArray(slide)) { %>
@@ -103,7 +102,7 @@
         </script>
 
                                     
-        <script src="/js/angularExamples.js"></script>                            
+        <script src="js/angularExamples.js"></script>                            
     </body>
 
 </html>

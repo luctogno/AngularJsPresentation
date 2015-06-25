@@ -1,4 +1,4 @@
-/* use stric */
+/* jshint ignore:start */
 
 //Implementazione spicciola delle parti di AngularJS: Scope e Controller
 
@@ -126,3 +126,5 @@ setTimeout(function () {
     rootScope.title = 'AngularJS is easy !!';
   });
 }, 5000);
+
+/* jshint ignore:end */
