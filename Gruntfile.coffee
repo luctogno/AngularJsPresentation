@@ -42,6 +42,16 @@ module.exports = (grunt) ->
                     open: true
                     livereload: true
 
+            livereloadS:
+                options:
+                    port: 9090
+                    # Change hostname to '0.0.0.0' to access
+                    # the server from outside.
+                    hostname: '0.0.0.0'
+                    base: 'dist'
+                    open: true
+                    livereload: true
+
         coffeelint:
 
             options:
@@ -113,15 +123,22 @@ module.exports = (grunt) ->
             'connect:livereload'
             'watch'
         ]
+		
+	
 
     grunt.registerTask 'dist',
         'Save presentation files to *dist* directory.', [
-            'test'
+            'coffeelint'
             'buildIndex'
             'copy'
         ]
 
-    
+    grunt.registerTask 'server',
+        'Run presentation locally and start watch process (living document).', [
+           'dist'
+           'connect:livereloadS'
+           'watch'
+        ]
 
     # Define default task.
     grunt.registerTask 'default', [

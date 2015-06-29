@@ -1,28 +1,23 @@
 /* jshint strict:false */
 /* global angular */
 
-var module = angular.module('PresentationModule', []);
-
-module.controller('Controller', ['$scope', function ($scope) {
+angular.module('PresentationModule', [])
+    .controller('Controller', ['$scope', function ($scope) {
     'use strict';
     $scope.modello = '';
-}]);
-
-module.controller('shapeController', function ($scope) {
+}])
+    .controller('shapeController', function ($scope) {
     $scope.message = 'In shape controller';
     $scope.type = 'Shape';
-});
-
-module.controller('circleController', function ($scope) {
+})
+    .controller('circleController', function ($scope) {
     $scope.message = 'In circle controller';
-});
-
-module.controller('squareController', function ($scope) {
+})
+    .controller('squareController', function ($scope) {
     $scope.message = 'In square controller';
     $scope.type = 'Square';
-});
-
-module.directive('digitalClock', [
+})
+    .directive('digitalClock', [
     '$interval',
     '$filter',
     function ($interval, $filter) {
@@ -42,16 +37,15 @@ module.directive('digitalClock', [
                 // ogni secondo esegue la funzione
             }
         };
-    }]);
-
-module.controller('theController', function ($scope) {
+    }])
+    .controller('theController', function ($scope) {
     $scope.colors = [
-        { color: 'blue', name: 'BLU', showOther : true},
-        { color: 'red', name: 'ROSSO', showOther : true },
-        { color: 'yellow', name: 'GIALLO', showOther : false },
-        { color: 'orange', name: 'ARANCIO', showOther : false },
-        { color: 'purple', name: 'VIOLA', showOther : false },
-        { color: 'green', name: 'VERDE', showOther : true }
+        { color: 'blue', name: 'BLU', showOther: true },
+        { color: 'red', name: 'ROSSO', showOther: true },
+        { color: 'yellow', name: 'GIALLO', showOther: false },
+        { color: 'orange', name: 'ARANCIO', showOther: false },
+        { color: 'purple', name: 'VIOLA', showOther: false },
+        { color: 'green', name: 'VERDE', showOther: true }
     ];
 
     $scope.changeColor = function (elem) {

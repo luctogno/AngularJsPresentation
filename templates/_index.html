@@ -5,7 +5,7 @@
         <meta charset="utf-8">
 
         <title>Tinvention presents AngularJs</title>
-        
+
         <link rel="icon" href="img/favicon.png" type="image/x-icon"/>
 
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -14,15 +14,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
         <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
-    
+
         <link rel="stylesheet" href="bower_components/reveal.js/css/theme/beige.css" id="theme">
-    
+
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-        
+
         <link rel="stylesheet" href="css/style.css">
 
         <!-- For syntax highlighting -->
-        <link rel="stylesheet" href="bower_components/highlightjs/styles/default.css">
+
         <link rel="stylesheet" href="bower_components/highlightjs/styles/solarized_dark.css" id="highlight-theme">
 
         <!-- If the query includes 'print-pdf', use the PDF print sheet -->
@@ -43,7 +43,7 @@
 
     <body>
 
-        <div class="reveal" ng-app="PresentationModule">
+        <div class="reveal">
 
             <div class="slides" ng-controller="Controller">
 
@@ -62,16 +62,16 @@
             </div>
 
         </div>
-                                    
+
 		<script src="bower_components/angularjs/angular.min.js"></script>
 
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-           
-        <script src="bower_components/reveal.js/lib/js/head.min.js"></script>       
-        <script src="bower_components/highlightjs/highlight.pack.js"></script>         
+
+        <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+        <script src="bower_components/highlightjs/highlight.pack.js"></script>
         <script src="bower_components/reveal.js/js/reveal.js"></script>
-                                    
+
         <script>
             // Configure Reveal
             // Full list of configuration options available here:
@@ -81,7 +81,7 @@
                 progress: true,
                 history: true,
                 center: true,
-				zoom:true,
+				        zoom:true,
 
                 theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
                 transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
@@ -91,19 +91,22 @@
                     { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
                     { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: 'bower_components/highlightjs/highlight.pack.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                  //  { src: 'bower_components/highlightjs/highlight.pack.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
                     { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-                    // { src: 'bower_components/reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
-                    //{ src: 'bower_components/reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
 
                     { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } }
                 ]
             });
+
+            Reveal.addEventListener( 'ready', function( event ) {
+                // event.currentSlide, event.indexh, event.indexv
+                angular.bootstrap(document, ['PresentationModule']);
+                hljs.initHighlightingOnLoad();
+            } );
         </script>
 
-                                    
-        <script src="/js/angularExamples.js"></script>                            
+        <script src="js/angularExamples.js"></script>
     </body>
 
 </html>
