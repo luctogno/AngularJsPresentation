@@ -1,11 +1,10 @@
 /* jshint strict:false */
 /* global angular */
 
-angular.module('PresentationModule', [
-
-])
-    .controller('IlController', ['$scope', function ($scope) {
-    $scope.modello1 = '';
+angular.module('PresentationModule', [])
+    .controller('Controller', ['$scope', function ($scope) {
+    'use strict';
+    $scope.modello = '';
 }])
     .controller('shapeController', function ($scope) {
     $scope.message = 'In shape controller';
@@ -53,4 +52,10 @@ angular.module('PresentationModule', [
         $scope.bgColor = elem.color;
         $scope.showOther = elem.showOther;
     };
+});
+
+angular.element(document).ready(function () {
+    setTimeout(function(){
+		angular.bootstrap(document, ['PresentationModule']);
+	}, 2000);
 });
