@@ -53,9 +53,3 @@ angular.module('PresentationModule', [])
         $scope.showOther = elem.showOther;
     };
 });
-
-angular.element(document).ready(function () {
-    setTimeout(function(){
-		angular.bootstrap(document, ['PresentationModule']);
-	}, 2000);
-});
